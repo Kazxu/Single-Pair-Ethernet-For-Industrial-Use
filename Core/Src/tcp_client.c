@@ -1,17 +1,19 @@
 #include "tcp_client.h"
-
+// FUNKER IKKE MITT EGEN EXPERIMENT KODE
 #define SERVER_IP "192.168.20.100"  // Change to your server's IP address
 #define SERVER_PORT 40
 
 static struct tcp_pcb *tcp_client_pcb;
 
 static err_t tcp_client_sent(void *arg, struct tcp_pcb *tpcb, u16_t len) {
-    tcp_close(tpcb);
+	printf("Data sent, length: %d\n", len);
+	tcp_close(tpcb);
     return ERR_OK;
 }
 
 static err_t tcp_client_connected(void *arg, struct tcp_pcb *tpcb, err_t err) {
-    const char message[] = "5";
+	 printf("Connection established\n");
+	const char message[] = "5";
 
     if (err == ERR_OK) {
         tcp_sent(tpcb, tcp_client_sent);
@@ -19,13 +21,15 @@ static err_t tcp_client_connected(void *arg, struct tcp_pcb *tpcb, err_t err) {
         tcp_output(tpcb);  // Send data immediately
         return ERR_OK;
     } else {
+    	printf("Connection failed with err: %d\n", err);
         tcp_close(tpcb);
         return err;
     }
 }
 
 static void tcp_client_connection_err(void *arg, err_t err) {
-    struct tcp_pcb *tpcb = (struct tcp_pcb*) arg;
+	printf("TCP error: %d\n", err);
+	struct tcp_pcb *tpcb = (struct tcp_pcb*) arg;
     if (tpcb) {
         tcp_close(tpcb);
     }

@@ -15,6 +15,10 @@
 #include <stdbool.h>
 #include "adin1110.h"
 #include "boardsupport.h"
+#include "lwip/tcp.h"
 
+extern struct tcp_pcb *global_tpcb;  // Declaration of the global TCP control block
+
+void send_eval_string_msg(struct tcp_pcb *tpcb);  // Function prototype for sending messages
 
 #endif /* MAIN_H */

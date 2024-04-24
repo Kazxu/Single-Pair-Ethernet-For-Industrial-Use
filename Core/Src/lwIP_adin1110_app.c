@@ -327,7 +327,7 @@ void LwIP_Init( LwIP_ADIN1110_t* eth,  board_t *boardDetails)
     if (boardDetails->ip_addr_fixed == 1)
     {
       ip4_addr_t ip, mask, gw;
-
+      // Add our network interface to the netif_list and set it as default
       IP4_ADDR(&ip, boardDetails->ip_addr[0], boardDetails->ip_addr[1], boardDetails->ip_addr[2], boardDetails->ip_addr[3]);
       IP4_ADDR(&mask,  boardDetails->net_mask[0], boardDetails->net_mask[1], boardDetails->net_mask[2], boardDetails->net_mask[3]);
       IP4_ADDR(&gw,   boardDetails->gateway[0], boardDetails->gateway[1], boardDetails->gateway[2], boardDetails->gateway[3]);
@@ -340,6 +340,7 @@ void LwIP_Init( LwIP_ADIN1110_t* eth,  board_t *boardDetails)
     }
     else
     {
+    	//NETIF SETUP GREIER
       netif_add(&eth->netif, IPADDR_ANY, IPADDR_ANY, IPADDR_ANY, eth,
       LwipADIN1110Init, ethernet_input);
 

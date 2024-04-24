@@ -186,6 +186,8 @@
 #define LWIP_COMPAT_SOCKETS 0
 #define LWIP_NETCONN 0
 
+
+
 /**
  * NO_SYS_NO_TIMERS==1: Drop support for sys_timeout when NO_SYS==1
  * Mainly for compatibility to old versions.
