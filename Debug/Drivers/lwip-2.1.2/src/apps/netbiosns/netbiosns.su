@@ -1,0 +1,5 @@
+../Drivers/lwip-2.1.2/src/apps/netbiosns/netbiosns.c:243:1:netbiosns_name_decode	40	static
+../Drivers/lwip-2.1.2/src/apps/netbiosns/netbiosns.c:347:1:netbiosns_recv	64	static
+../Drivers/lwip-2.1.2/src/apps/netbiosns/netbiosns.c:478:1:netbiosns_init	8	static
+../Drivers/lwip-2.1.2/src/apps/netbiosns/netbiosns.c:501:1:netbiosns_set_name	32	static
+../Drivers/lwip-2.1.2/src/apps/netbiosns/netbiosns.c:524:1:netbiosns_stop	8	static

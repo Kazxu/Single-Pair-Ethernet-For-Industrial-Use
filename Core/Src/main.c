@@ -19,7 +19,9 @@
 #include "lwip/opt.h"
 #include "lwip/sys.h"
 #include "lwip/tcp.h"
-
+#include <stdlib.h>
+#include <string.h>
+#include <pthread.h>
 
 //FOR Å ENDRE VÅR TCP SERVER er i TCPECHO_RAW.C
 /* USER CODE BEGIN Includes */
@@ -27,6 +29,8 @@
 
 #include "tcp_client.h"
 struct netif gnetif;
+
+
 
 int main(void)
 {
@@ -113,33 +117,35 @@ int main(void)
     {
 
       uint32_t now  = BSP_SysNow();
-      if (now - heartbeatCheckTime >= 250)
-      {
-        heartbeatCheckTime = now;
 
-        BSP_HeartBeat();
+  	if (now - heartbeatCheckTime >= 250)
+  	      {
+  	        heartbeatCheckTime = now;
 
-        adin1110_GetLinkStatus(hDevice, &linkStatus);
+  	        BSP_HeartBeat();
 
-        if ( linkStatus == ADI_ETH_LINK_STATUS_UP )
-        	BSP_FuncLed1(true);
+  	        adin1110_GetLinkStatus(hDevice, &linkStatus);
+
+  	        if ( linkStatus == ADI_ETH_LINK_STATUS_UP )
+  	        	BSP_FuncLed1(true);
 
 
 
-        else
-        	BSP_FuncLed1(false);
+  	        else
+  	        	BSP_FuncLed1(false);
 
-        sys_check_timeouts();
-      }
+  	        sys_check_timeouts();
+  	      }
 
-      if ( LwIP_ADIN1110LinkInput(&myConn.netif) == 0)
-    	  BSP_ErrorLed(false);
-      else
-    	  BSP_ErrorLed(true);
+  	      if ( LwIP_ADIN1110LinkInput(&myConn.netif) == 0)
+  	    	  BSP_ErrorLed(false);
+  	      else
+  	    	  BSP_ErrorLed(true);
 
-    }if (global_tpcb != NULL) {
 
-    }
 }
 
 
+
+
+}

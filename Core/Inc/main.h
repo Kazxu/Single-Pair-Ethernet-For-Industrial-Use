@@ -17,7 +17,8 @@
 #include "boardsupport.h"
 #include "lwip/tcp.h"
 
-extern struct tcp_pcb *global_tpcb;  // Declaration of the global TCP control block
+extern struct tcp_pcb *global_tpcb;  // Declaration of the global TCP control block, BRUKES FOR Å FÅ LOV Å BRUKE SAME T PCB
+// TIL GLOBAL
 
 void send_eval_string_msg(struct tcp_pcb *tpcb);  // Function prototype for sending messages
 

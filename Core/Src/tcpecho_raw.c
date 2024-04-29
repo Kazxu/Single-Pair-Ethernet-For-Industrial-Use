@@ -40,7 +40,7 @@
  *
  *
  *
- * EDITED FOR OUR BACHELOR USAGE - DAVY POON
+ * EDITED FOR OUR BACHELOR USAGE, mixed code and etc - DAVY POON
  */
 
 #include "lwip/opt.h"
@@ -50,16 +50,16 @@
 #include "lwip/opt.h"
 #include "lwip/sys.h"
 #include "main.h"
+static u32_t last_send_time = 0;  // Timestamp of the last sent message
 
-
-static char *EVAL_STRING_MSG = " \n YOUR MSG: \n" ;
+static char *EVAL_STRING_MSG = " \n YOUR MSG: TILKOBLET YAHOO \n" ;
 
 struct tcp_pcb *global_tpcb = NULL;  // Definition of the global TCP control block
 
 
 #if LWIP_TCP && LWIP_CALLBACK_API
 
-static struct tcp_pcb *tcpecho_raw_pcb;
+
 
 
 enum tcpecho_raw_states
@@ -153,32 +153,63 @@ tcpecho_raw_error(void *arg, err_t err)
 
   tcpecho_raw_free(es);
 }
+// Define 'last_send_time'
+// Function poll callback for the TCP echo server. Timer baserer seg til polling interval set i initialization.
+static err_t tcpecho_raw_poll(void *arg, struct tcp_pcb *tpcb) {
 
-static err_t
-tcpecho_raw_poll(void *arg, struct tcp_pcb *tpcb)
-{
-  err_t ret_err;
-  struct tcpecho_raw_state *es;
+	// Retrieve the state structure til current TCP connection, passed as 'arg' basert på default LWIP -raw API.
+	struct tcpecho_raw_state *es = (struct tcpecho_raw_state *)arg;
 
-  es = (struct tcpecho_raw_state *)arg;
-  if (es != NULL) {
-    if (es->p != NULL) {
-      /* there is a remaining pbuf (chain)  */
-      tcpecho_raw_send(tpcb, es);
-    } else {
-      /* no remaining pbuf (chain)  */
-      if(es->state == ES_CLOSING) {
-        tcpecho_raw_close(tpcb, es);
-      }
+	// Get the current system time in milliseconds from the lwIP system clock.
+	u32_t current_time = sys_now();
+
+    // Check if 500ms
+    if (current_time - last_send_time >= 500) {
+        const char *msg = "Hello, this is a timed message! \n";
+
+        // Check if there is enough space in the TCP send buffer to send the message.
+        if (tcp_sndbuf(tpcb) > strlen(msg)) {
+
+        	 // Write the message to the TCP send buffer.
+        	/* pcb: The TCP control block (PCB) -> Den init
+			   data: Pointer to the data to be sent.
+               len: Length of the data in bytes.
+               flags: Control flag -> operation av tcp_write.*/
+            tcp_write(tpcb, msg, strlen(msg), TCP_WRITE_FLAG_COPY);// Ensure that the message is actually sent out over the network.
+            /*
+             Efficient buffer management, including appropriate use of flags like TCP_WRITE_FLAG_COPY,
+             is essential to ensure that your TCP/IP stack remains responsive and efficient,
+             avoiding potential pitfalls like buffer overruns or unnecessary delays in data transmission.
+             - https://lwip.fandom.com/wiki/Tuning_TCP
+             */
+
+            // Calls the internal lwIP function to process and send TCP packets.
+            tcp_output(tpcb); //OUTPUT fra LWIP
+            last_send_time = current_time;  // Update the last send time -> current time
+        }
     }
-    ret_err = ERR_OK;
-  } else {
-    /* nothing to be done */
-    tcp_abort(tpcb);
-    ret_err = ERR_ABRT;
-  }
-  return ret_err;
+
+    // Check if -> echo server state == not null, som betyr connection is still active
+    if (es != NULL) {
+    	 // Check if hvis pending data har ikke blitt sent.
+        if (es->p != NULL) {
+            // send remaining data
+        	// Logic to send remaining data ikke blitt implementert enda
+        	// "Typically, this would involve checking the TCP send buffer space and calling tcp_write as needed." - LWIP
+        }
+        // any additional handling --> HER KAN VI ADDE MER FUNKSJON
+        // inkludert  connection maintenance, error checks, etc.
+
+    } else { // If the state == null, problem med connection (e.g., it was unexpectedly closed).
+
+    	// Abort the TCP connection to clean up the PCB and release resources.
+        tcp_abort(tpcb);
+        return ERR_ABRT;
+    }
+    // If everything processed correctly and the connection is still active, return ERR_OK.
+    return ERR_OK;
 }
+
 
 static err_t
 tcpecho_raw_sent(void *arg, struct tcp_pcb *tpcb, u16_t len)
@@ -281,37 +312,38 @@ tcpecho_raw_accept(void *arg, struct tcp_pcb *newpcb, err_t err)
   return ret_err;
 }
 
+// Initialization function to set up the PCB and polling
 void tcpecho_raw_init(void) {
+	//LAGER TCP  PCB -> TCP SOCKET
     global_tpcb = tcp_new();
-    if (global_tpcb != NULL) {
-        tcp_bind(global_tpcb, IP_ADDR_ANY, 66);
-        global_tpcb = tcp_listen(global_tpcb);
-        tcp_accept(global_tpcb, tcpecho_raw_accept);
+    if (global_tpcb != NULL) {  // Check if the PCB was successfully created.
+        err_t err = tcp_bind(global_tpcb, IP_ADDR_ANY, 66);
+        // Bind the newly created PCB object to any IP address on port 66.
+
+        if (err == ERR_OK) {// Check if the binding was successful.
+
+        	// Putter PCB == LISTEN state, convert til listen PCB -> accept incoming connections.
+        	global_tpcb = tcp_listen(global_tpcb);
+
+        	 // Set up a callback function som event handler -> incoming connections.
+        	 // `tcp_accept` assigns a function to be called when a new connection is established.
+            tcp_accept(global_tpcb, tcpecho_raw_accept);
+
+            // Set up a callback function to be called periodically
+            // polling callback brukt som regularly check/event handle tasks som å  sende periodic/timed messages
+            // The `1` = polling frequency; in the lwIP stack ->> multiplied av TCP timer interval
+            // (typically 500 ms), so a value of `1`  = 500 ms.
+            tcp_poll(global_tpcb, tcpecho_raw_poll, 1);  // Set the poll interval
+        }
     }
 }
-/**
-void
-tcpecho_raw_init(void)
-{
 
-  tcpecho_raw_pcb = tcp_new_ip_type(IPADDR_TYPE_ANY);
-  if (tcpecho_raw_pcb != NULL) {
-    err_t err;
-//PORTER Å SETTE
-    err = tcp_bind(tcpecho_raw_pcb, IP_ANY_TYPE, 66);
-    if (err == ERR_OK) {
-      tcpecho_raw_pcb = tcp_listen(tcpecho_raw_pcb);
-      tcp_accept(tcpecho_raw_pcb, tcpecho_raw_accept);
-    } else {
 
-    }
-  } else {
- }
-}*/
+
 void send_eval_string_msg(struct tcp_pcb *tpcb) {
     if (tpcb != NULL && tcp_sndbuf(tpcb) > strlen(EVAL_STRING_MSG)) {
         tcp_write(tpcb, EVAL_STRING_MSG, strlen(EVAL_STRING_MSG), TCP_WRITE_FLAG_COPY);
-        tcp_output(tpcb);  // Make sure the data is sent immediately
+        tcp_output(tpcb);  // Data sendt Instant, brukes kanskje senere, vet ikke, har bare med tilfelle
     }
 }
 

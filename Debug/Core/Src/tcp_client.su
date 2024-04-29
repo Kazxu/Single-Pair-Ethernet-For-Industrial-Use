@@ -1,0 +1,4 @@
+../Core/Src/tcp_client.c:8:14:tcp_client_sent	24	static
+../Core/Src/tcp_client.c:14:14:tcp_client_connected	32	static
+../Core/Src/tcp_client.c:30:13:tcp_client_connection_err	24	static
+../Core/Src/tcp_client.c:38:6:tcp_client_send	16	static

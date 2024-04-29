@@ -1,0 +1,4 @@
+../Core/Src/tcp_client.c:8:14:tcp_client_sent	1
+../Core/Src/tcp_client.c:14:14:tcp_client_connected	2
+../Core/Src/tcp_client.c:30:13:tcp_client_connection_err	2
+../Core/Src/tcp_client.c:38:6:tcp_client_send	3
