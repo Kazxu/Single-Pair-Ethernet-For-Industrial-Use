@@ -50,6 +50,7 @@
 #include "lwip/opt.h"
 #include "lwip/sys.h"
 #include "main.h"
+
 static u32_t last_send_time = 0;  // Timestamp of the last sent message
 
 static char *EVAL_STRING_MSG = " \n YOUR MSG: TILKOBLET YAHOO \n" ;
@@ -165,7 +166,10 @@ static err_t tcpecho_raw_poll(void *arg, struct tcp_pcb *tpcb) {
 
     // Check if 500ms
     if (current_time - last_send_time >= 500) {
-        const char *msg = "Hello, this is a timed message! \n";
+
+
+        //const char *msg = "Hello, this is a timed message! \n";
+    	const char *msg = buffer;
 
         // Check if there is enough space in the TCP send buffer to send the message.
         if (tcp_sndbuf(tpcb) > strlen(msg)) {
@@ -185,6 +189,8 @@ static err_t tcpecho_raw_poll(void *arg, struct tcp_pcb *tpcb) {
 
             // Calls the internal lwIP function to process and send TCP packets.
             tcp_output(tpcb); //OUTPUT fra LWIP
+
+
             last_send_time = current_time;  // Update the last send time -> current time
         }
     }

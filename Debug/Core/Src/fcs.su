@@ -1,3 +1,0 @@
-../Core/Src/fcs.c:60:10:HAL_FcsInit	4	static
-../Core/Src/fcs.c:66:10:HAL_FcsUnInit	4	static
-../Core/Src/fcs.c:72:10:HAL_FcsCalculate	24	static
