@@ -1,0 +1,10 @@
+../Core/Src/tcpecho_raw.c:83:1:tcpecho_raw_free	16	static
+../Core/Src/tcpecho_raw.c:96:1:tcpecho_raw_close	16	static
+../Core/Src/tcpecho_raw.c:110:1:tcpecho_raw_send	32	static
+../Core/Src/tcpecho_raw.c:146:1:tcpecho_raw_error	24	static
+../Core/Src/tcpecho_raw.c:158:14:tcpecho_raw_poll	40	static
+../Core/Src/tcpecho_raw.c:220:1:tcpecho_raw_sent	32	static
+../Core/Src/tcpecho_raw.c:242:1:tcpecho_raw_recv	32	static
+../Core/Src/tcpecho_raw.c:286:1:tcpecho_raw_accept	32	static
+../Core/Src/tcpecho_raw.c:321:6:tcpecho_raw_init	24	static
+../Core/Src/tcpecho_raw.c:349:6:send_eval_string_msg	24	static

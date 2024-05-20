@@ -1,0 +1,15 @@
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:274:1:sntp_format_time	1
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:286:1:sntp_process	1
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:336:1:sntp_initialize_request	1
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:366:1:sntp_retry	3
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:436:1:sntp_recv	11
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:540:1:sntp_send_request	2
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:603:1:sntp_request	3
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:648:1:sntp_init	5
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:686:1:sntp_stop	3
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:707:6:sntp_enabled	1
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:718:1:sntp_setoperatingmode	1
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:731:1:sntp_getoperatingmode	1
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:744:1:sntp_getreachability	2
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:777:1:sntp_setserver	3
+../Drivers/lwip-2.1.2/src/apps/sntp/sntp.c:828:1:sntp_getserver	2

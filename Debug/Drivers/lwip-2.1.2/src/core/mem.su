@@ -1,0 +1,5 @@
+../Drivers/lwip-2.1.2/src/core/mem.c:160:1:mem_init	4	static
+../Drivers/lwip-2.1.2/src/core/mem.c:169:1:mem_trim	16	static
+../Drivers/lwip-2.1.2/src/core/mem.c:207:1:mem_malloc	24	static
+../Drivers/lwip-2.1.2/src/core/mem.c:228:1:mem_free	16	static
+../Drivers/lwip-2.1.2/src/core/mem.c:982:1:mem_calloc	16	static

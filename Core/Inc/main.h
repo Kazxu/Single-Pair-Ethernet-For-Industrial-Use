@@ -21,5 +21,5 @@ extern struct tcp_pcb *global_tpcb;  // Declaration of the global TCP control bl
 // TIL GLOBAL
 
 void send_eval_string_msg(struct tcp_pcb *tpcb);  // Function prototype for sending messages
-extern char buffer[];
+
 #endif /* MAIN_H */

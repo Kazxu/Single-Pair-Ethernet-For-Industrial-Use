@@ -1,0 +1,6 @@
+../Core/Src/gpio.c:48:6:GPIO_Init	1
+../Core/Src/gpio.c:164:6:MX_Led_Toggle	1
+../Core/Src/gpio.c:177:10:HAL_INT_N_Register_Callback	1
+../Core/Src/gpio.c:193:6:HAL_GPIO_EXTI_Callback	3
+../Core/Src/gpio.c:206:10:HAL_INT_N_DisableIRQ	1
+../Core/Src/gpio.c:213:10:HAL_INT_N_EnableIRQ	1

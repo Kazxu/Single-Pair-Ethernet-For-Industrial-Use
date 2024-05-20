@@ -51,14 +51,14 @@ void GPIO_Init(void)
 
     /* GPIO Ports Clock Enable */
     ETH_GPIO_ENABLE;
-    __HAL_RCC_GPIOC_CLK_ENABLE();  // Add this if not already present
-       __HAL_RCC_GPIOE_CLK_ENABLE();
-       __HAL_RCC_GPIOB_CLK_ENABLE();
-       __HAL_RCC_GPIOH_CLK_ENABLE();
-       __HAL_RCC_GPIOD_CLK_ENABLE();
-       __HAL_RCC_GPIOA_CLK_ENABLE();
-       __HAL_RCC_GPIOG_CLK_ENABLE();
-       __HAL_RCC_GPIOF_CLK_ENABLE();
+    __HAL_RCC_GPIOC_CLK_ENABLE();
+    __HAL_RCC_GPIOE_CLK_ENABLE();
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    __HAL_RCC_GPIOH_CLK_ENABLE();
+    __HAL_RCC_GPIOD_CLK_ENABLE();
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_GPIOG_CLK_ENABLE();
+    __HAL_RCC_GPIOF_CLK_ENABLE();
 
     /*Configure GPIO pin Output Level */
 #if defined(EVAL_ADIN1110EBZ)
@@ -127,13 +127,10 @@ void GPIO_Init(void)
 
     /*Configure GPIO pins : PBPin PBPin PBPin dassdaada*/
     // Enable the GPIO Clock for Port C
-    __HAL_RCC_GPIOC_CLK_ENABLE();
     GPIO_InitStruct.Pin = CFG0_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG_ADC_CONTROL;;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-
 
     GPIO_InitStruct.Pin = CFG1_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
@@ -141,7 +138,7 @@ void GPIO_Init(void)
     HAL_GPIO_Init(CFG1_GPIO_Port, &GPIO_InitStruct);
 
     GPIO_InitStruct.Pin = CFG2_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG_ADC_CONTROL;;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(CFG2_GPIO_Port, &GPIO_InitStruct);
 
