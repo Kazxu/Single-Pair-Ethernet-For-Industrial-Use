@@ -1,13 +1,5 @@
-# Eval_Adin1110
+# Eval_Adin1110, Bachelor Project
 
-
-IP : 192.168.22.8
-
-
-PORT 66 FOR TCP -> ER ET SERVER
-
-TCP SERVER FUNKER
-
-ECHO FUNKER GJENNOM TCP
-
-ECHO FUNKER IKKE GJENNOM WHILE(1)
+IP : 192.168.22.8 PORT 66 FOR TCP SERVER
+Serial Monitor Works.
+ADC Currently only works in branch "dev_adc_only" Correctly.
