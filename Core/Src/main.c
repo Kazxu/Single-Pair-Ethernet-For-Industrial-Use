@@ -28,25 +28,24 @@
 #include "stdio.h" // For sprintf
 
 static void MX_ADC1_Init(void);
-
-
 void toStringValue(uint32_t adcValue, char* buffer, size_t bufferSize);
-//FOR Å ENDRE VÅR TCP SERVER er i TCPECHO_RAW.C
 
 
 uint32_t adcValue = 10;
 ADC_HandleTypeDef hadc1;
 
 
-char buffer[20];
+char buffer[50];
 
 
 int main(void)
 {
-
+	char temp[10];
 	SystemClock_Config();
 	HAL_Init();
 	MX_ADC1_Init();            // Initialize ADC
+
+
 
     uint32_t       error;
     uint32_t       heartbeatCheckTime = 0;
@@ -55,8 +54,7 @@ int main(void)
     adin1110_DeviceHandle_t hDevice = &dev;
 
     // DEVICE INFO
-    /* INKLUDERT
-
+    /*
     adin1110_DeviceHandle_t* hDevice;
     struct netif netif;
     uint8_t* macAddress;
@@ -98,14 +96,14 @@ int main(void)
     boardDetails.gateway[2] =   20;
     boardDetails.gateway[3] =   1;
 
-    boardDetails.ip_addr_fixed = IP_FIXED;//IP_DYNAMIC;
+    boardDetails.ip_addr_fixed = IP_FIXED;//IP_DYNAMIC OR FIXED;
 
     error = discoveradin1110(&hDevice);
     DEBUG_RESULT("Failed to access ADIN1110", error, 0);
 
-    //SETTER OP DRITT GREIER
+    //SETUP
     LwIP_StructInit(&myConn, &hDevice, boardDetails.mac);
-    //INIT TCP PCB MED FORHOLD TIL DEVICE INFO OG TCP PCB
+    //INIT TCP PCB -> DEVICE INFO OG TCP PCB
     /*
       netif_add(&eth->netif, &ip, &mask, &gw, eth,
       LwipADIN1110Init, ethernet_input);
@@ -120,6 +118,8 @@ int main(void)
     netif_set_link_up(&myConn.netif);
     tcpecho_raw_init(buffer);
 
+	sprintf(temp, "DEVICE OK \n");
+	HAL_UART_Transmit(&huart1, (uint8_t *)temp, strlen(temp), HAL_MAX_DELAY);
 
     while(1)
     {
@@ -127,7 +127,7 @@ int main(void)
      HAL_ADC_Start(&hadc1);  // Start ADC conversion
 
      // Poll for conversion completion with a timeout of 20 ms
-     HAL_ADC_PollForConversion(&hadc1, 20);
+     HAL_ADC_PollForConversion(&hadc1, 100);
 
      // Get the ADC value after conversion completion
      adcValue = HAL_ADC_GetValue(&hadc1);
@@ -224,7 +224,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_13;
+  sConfig.Channel = ADC_CHANNEL_1;
   sConfig.Rank = ADC_REGULAR_RANK_1;
   sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;

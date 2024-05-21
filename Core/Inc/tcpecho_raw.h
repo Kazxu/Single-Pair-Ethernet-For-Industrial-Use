@@ -31,5 +31,5 @@
 #define LWIP_TCPECHO_RAW_H
 
 void tcpecho_raw_init(char *buffer);
-extern char buffer[20];
+extern char buffer[50];
 #endif /* LWIP_TCPECHO_RAW_H */
