@@ -23,7 +23,6 @@ C_SRCS += \
 ../Core/Src/sysclock.c \
 ../Core/Src/sysmem.c \
 ../Core/Src/system_stm32l4xx.c \
-../Core/Src/tcp_client.c \
 ../Core/Src/tcpecho_raw.c \
 ../Core/Src/usart.c 
 
@@ -46,7 +45,6 @@ C_DEPS += \
 ./Core/Src/sysclock.d \
 ./Core/Src/sysmem.d \
 ./Core/Src/system_stm32l4xx.d \
-./Core/Src/tcp_client.d \
 ./Core/Src/tcpecho_raw.d \
 ./Core/Src/usart.d 
 
@@ -69,7 +67,6 @@ OBJS += \
 ./Core/Src/sysclock.o \
 ./Core/Src/sysmem.o \
 ./Core/Src/system_stm32l4xx.o \
-./Core/Src/tcp_client.o \
 ./Core/Src/tcpecho_raw.o \
 ./Core/Src/usart.o 
 
@@ -81,7 +78,7 @@ Core/Src/%.o Core/Src/%.su Core/Src/%.cyclo: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/adi_mac.cyclo ./Core/Src/adi_mac.d ./Core/Src/adi_mac.o ./Core/Src/adi_mac.su ./Core/Src/adi_phy.cyclo ./Core/Src/adi_phy.d ./Core/Src/adi_phy.o ./Core/Src/adi_phy.su ./Core/Src/adi_spi_oa.cyclo ./Core/Src/adi_spi_oa.d ./Core/Src/adi_spi_oa.o ./Core/Src/adi_spi_oa.su ./Core/Src/adin1110.cyclo ./Core/Src/adin1110.d ./Core/Src/adin1110.o ./Core/Src/adin1110.su ./Core/Src/boardsupport.cyclo ./Core/Src/boardsupport.d ./Core/Src/boardsupport.o ./Core/Src/boardsupport.su ./Core/Src/dma.cyclo ./Core/Src/dma.d ./Core/Src/dma.o ./Core/Src/dma.su ./Core/Src/fcs.cyclo ./Core/Src/fcs.d ./Core/Src/fcs.o ./Core/Src/fcs.su ./Core/Src/gpio.cyclo ./Core/Src/gpio.d ./Core/Src/gpio.o ./Core/Src/gpio.su ./Core/Src/hal.cyclo ./Core/Src/hal.d ./Core/Src/hal.o ./Core/Src/hal.su ./Core/Src/lwIP_adin1110_app.cyclo ./Core/Src/lwIP_adin1110_app.d ./Core/Src/lwIP_adin1110_app.o ./Core/Src/lwIP_adin1110_app.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/spi.cyclo ./Core/Src/spi.d ./Core/Src/spi.o ./Core/Src/spi.su ./Core/Src/stm32l4xx_hal_msp.cyclo ./Core/Src/stm32l4xx_hal_msp.d ./Core/Src/stm32l4xx_hal_msp.o ./Core/Src/stm32l4xx_hal_msp.su ./Core/Src/stm32l4xx_it.cyclo ./Core/Src/stm32l4xx_it.d ./Core/Src/stm32l4xx_it.o ./Core/Src/stm32l4xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysclock.cyclo ./Core/Src/sysclock.d ./Core/Src/sysclock.o ./Core/Src/sysclock.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32l4xx.cyclo ./Core/Src/system_stm32l4xx.d ./Core/Src/system_stm32l4xx.o ./Core/Src/system_stm32l4xx.su ./Core/Src/tcp_client.cyclo ./Core/Src/tcp_client.d ./Core/Src/tcp_client.o ./Core/Src/tcp_client.su ./Core/Src/tcpecho_raw.cyclo ./Core/Src/tcpecho_raw.d ./Core/Src/tcpecho_raw.o ./Core/Src/tcpecho_raw.su ./Core/Src/usart.cyclo ./Core/Src/usart.d ./Core/Src/usart.o ./Core/Src/usart.su
+	-$(RM) ./Core/Src/adi_mac.cyclo ./Core/Src/adi_mac.d ./Core/Src/adi_mac.o ./Core/Src/adi_mac.su ./Core/Src/adi_phy.cyclo ./Core/Src/adi_phy.d ./Core/Src/adi_phy.o ./Core/Src/adi_phy.su ./Core/Src/adi_spi_oa.cyclo ./Core/Src/adi_spi_oa.d ./Core/Src/adi_spi_oa.o ./Core/Src/adi_spi_oa.su ./Core/Src/adin1110.cyclo ./Core/Src/adin1110.d ./Core/Src/adin1110.o ./Core/Src/adin1110.su ./Core/Src/boardsupport.cyclo ./Core/Src/boardsupport.d ./Core/Src/boardsupport.o ./Core/Src/boardsupport.su ./Core/Src/dma.cyclo ./Core/Src/dma.d ./Core/Src/dma.o ./Core/Src/dma.su ./Core/Src/fcs.cyclo ./Core/Src/fcs.d ./Core/Src/fcs.o ./Core/Src/fcs.su ./Core/Src/gpio.cyclo ./Core/Src/gpio.d ./Core/Src/gpio.o ./Core/Src/gpio.su ./Core/Src/hal.cyclo ./Core/Src/hal.d ./Core/Src/hal.o ./Core/Src/hal.su ./Core/Src/lwIP_adin1110_app.cyclo ./Core/Src/lwIP_adin1110_app.d ./Core/Src/lwIP_adin1110_app.o ./Core/Src/lwIP_adin1110_app.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/spi.cyclo ./Core/Src/spi.d ./Core/Src/spi.o ./Core/Src/spi.su ./Core/Src/stm32l4xx_hal_msp.cyclo ./Core/Src/stm32l4xx_hal_msp.d ./Core/Src/stm32l4xx_hal_msp.o ./Core/Src/stm32l4xx_hal_msp.su ./Core/Src/stm32l4xx_it.cyclo ./Core/Src/stm32l4xx_it.d ./Core/Src/stm32l4xx_it.o ./Core/Src/stm32l4xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysclock.cyclo ./Core/Src/sysclock.d ./Core/Src/sysclock.o ./Core/Src/sysclock.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32l4xx.cyclo ./Core/Src/system_stm32l4xx.d ./Core/Src/system_stm32l4xx.o ./Core/Src/system_stm32l4xx.su ./Core/Src/tcpecho_raw.cyclo ./Core/Src/tcpecho_raw.d ./Core/Src/tcpecho_raw.o ./Core/Src/tcpecho_raw.su ./Core/Src/usart.cyclo ./Core/Src/usart.d ./Core/Src/usart.o ./Core/Src/usart.su
 
 .PHONY: clean-Core-2f-Src
 

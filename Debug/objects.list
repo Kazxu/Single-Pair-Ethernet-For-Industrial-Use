@@ -16,7 +16,6 @@
 "./Core/Src/sysclock.o"
 "./Core/Src/sysmem.o"
 "./Core/Src/system_stm32l4xx.o"
-"./Core/Src/tcp_client.o"
 "./Core/Src/tcpecho_raw.o"
 "./Core/Src/usart.o"
 "./Core/Startup/startup_stm32l4s5qiix.o"

@@ -50,13 +50,13 @@
 #include "lwip/opt.h"
 #include "lwip/sys.h"
 #include "main.h"
+
 static u32_t last_send_time = 0;  // Timestamp of the last sent message
 
 static char *EVAL_STRING_MSG = " \n YOUR MSG: TILKOBLET YAHOO \n" ;
 
 struct tcp_pcb *global_tpcb = NULL;  // Definition of the global TCP control block
-
-
+static char *shared_buffer = NULL; // Shared buffer between TCP Echo server and Main
 #if LWIP_TCP && LWIP_CALLBACK_API
 
 
@@ -165,7 +165,10 @@ static err_t tcpecho_raw_poll(void *arg, struct tcp_pcb *tpcb) {
 
     // Check if 500ms
     if (current_time - last_send_time >= 500) {
-        const char *msg = "Hello, this is a timed message! \n";
+
+
+       // const char *msg = "Hello, this is a timed message! \n";
+    	const char *msg = buffer;
 
         // Check if there is enough space in the TCP send buffer to send the message.
         if (tcp_sndbuf(tpcb) > strlen(msg)) {
@@ -185,6 +188,8 @@ static err_t tcpecho_raw_poll(void *arg, struct tcp_pcb *tpcb) {
 
             // Calls the internal lwIP function to process and send TCP packets.
             tcp_output(tpcb); //OUTPUT fra LWIP
+
+
             last_send_time = current_time;  // Update the last send time -> current time
         }
     }
@@ -313,8 +318,9 @@ tcpecho_raw_accept(void *arg, struct tcp_pcb *newpcb, err_t err)
 }
 
 // Initialization function to set up the PCB and polling
-void tcpecho_raw_init(void) {
+void tcpecho_raw_init(char *buffer) {
 	//LAGER TCP  PCB -> TCP SOCKET
+	shared_buffer = buffer;
     global_tpcb = tcp_new();
     if (global_tpcb != NULL) {  // Check if the PCB was successfully created.
         err_t err = tcp_bind(global_tpcb, IP_ADDR_ANY, 66);
