@@ -1,7 +1,0 @@
-../Core/Src/spi.c:40:19:ETH_SPI_Init	16	static
-../Core/Src/spi.c:70:6:HAL_SPI_MspInit	48	static
-../Core/Src/spi.c:149:6:HAL_SPI_MspDeInit	16	static
-../Core/Src/spi.c:170:19:HAL_SPI_Write_Read	32	static
-../Core/Src/spi.c:189:10:HAL_SPI_Register_Callback	16	static
-../Core/Src/spi.c:204:6:HAL_SPI_TxRxCpltCallback	16	static
-../Core/Src/spi.c:222:6:HAL_SPI_ErrorCallback	16	static

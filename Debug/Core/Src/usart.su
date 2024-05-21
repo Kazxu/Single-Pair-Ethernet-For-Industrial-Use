@@ -1,7 +1,0 @@
-../Core/Src/usart.c:36:19:MX_USART1_UART_Init	8	static
-../Core/Src/usart.c:54:6:HAL_UART_MspInit	40	static
-../Core/Src/usart.c:86:6:HAL_UART_MspDeInit	16	static
-../Core/Src/usart.c:113:19:submitRxBuffer	16	static
-../Core/Src/usart.c:119:19:submitTxBuffer	16	static
-../Core/Src/usart.c:132:6:HAL_UART_RxCpltCallback	16	static
-../Core/Src/usart.c:136:6:HAL_UART_ErrorCallback	16	static

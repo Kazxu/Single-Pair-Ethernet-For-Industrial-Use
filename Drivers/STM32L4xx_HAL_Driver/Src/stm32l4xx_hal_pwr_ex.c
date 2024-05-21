@@ -11,12 +11,13 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2017 STMicroelectronics.
-  * All rights reserved.
+  * <h2><center>&copy; Copyright (c) 2017 STMicroelectronics.
+  * All rights reserved.</center></h2>
   *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
+  * This software component is licensed by ST under BSD 3-Clause license,
+  * the "License"; You may not use this file except in compliance with the
+  * License. You may obtain a copy of the License at:
+  *                        opensource.org/licenses/BSD-3-Clause
   *
   ******************************************************************************
   */
@@ -272,7 +273,7 @@ HAL_StatusTypeDef HAL_PWREx_ControlVoltageScaling(uint32_t VoltageScaling)
 
 /**
   * @brief Enable battery charging.
-  *        When VDD is present, charge the external battery on VBAT through an internal resistor.
+  *        When VDD is present, charge the external battery on VBAT thru an internal resistor.
   * @param  ResistorSelection specifies the resistor impedance.
   *          This parameter can be one of the following values:
   *            @arg @ref PWR_BATTERY_CHARGING_RESISTOR_5     5 kOhms resistor
@@ -974,7 +975,7 @@ HAL_StatusTypeDef HAL_PWREx_ConfigPVM(PWR_PVMTypeDef *sConfigPVM)
 
 
   /* Configure EXTI 35 to 38 interrupts if so required:
-     scan through PVMType to detect which PVMx is set and
+     scan thru PVMType to detect which PVMx is set and
      configure the corresponding EXTI line accordingly. */
   switch (sConfigPVM->PVMType)
   {
@@ -1472,3 +1473,5 @@ __weak void HAL_PWREx_PVM4Callback(void)
 /**
   * @}
   */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

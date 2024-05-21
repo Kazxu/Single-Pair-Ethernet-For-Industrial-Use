@@ -6,12 +6,13 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2017 STMicroelectronics.
-  * All rights reserved.
+  * <h2><center>&copy; Copyright (c) 2017 STMicroelectronics.
+  * All rights reserved.</center></h2>
   *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
+  * This software component is licensed by ST under BSD 3-Clause license,
+  * the "License"; You may not use this file except in compliance with the
+  * License. You may obtain a copy of the License at:
+  *                       opensource.org/licenses/BSD-3-Clause
   *
   ******************************************************************************
   */
@@ -103,7 +104,7 @@ extern "C" {
 #endif /* FMC_PCSCNTR_CSCOUNT */
 
 #endif /* FMC_BANK1 */
-#if  defined(FMC_BANK3)
+#if defined(FMC_BANK3)
 
 #define IS_FMC_NAND_BANK(__BANK__) ((__BANK__) == FMC_NAND_BANK3)
 #define IS_FMC_WAIT_FEATURE(__FEATURE__) (((__FEATURE__) == FMC_NAND_WAIT_FEATURE_DISABLE) || \
@@ -313,7 +314,7 @@ typedef struct
                                         delay between ALE low and RE low.
                                         This parameter can be a number between Min_Data = 0 and Max_Data = 255 */
 } FMC_NAND_InitTypeDef;
-#endif /* FMC_BANK3 */
+#endif
 
 #if defined(FMC_BANK3)
 /**
@@ -506,13 +507,11 @@ typedef struct
   * @}
   */
 
-#if defined(FMC_BCR1_WFDIS)
 /** @defgroup FMC_Write_FIFO FMC Write FIFO
   * @{
   */
 #define FMC_WRITE_FIFO_DISABLE                  FMC_BCR1_WFDIS
 #define FMC_WRITE_FIFO_ENABLE                   (0x00000000U)
-#endif /* FMC_BCR1_WFDIS */
 /**
   * @}
   */
@@ -701,7 +700,7 @@ typedef struct
 /**
   * @}
   */
-#endif /* FMC_BANK3 */
+#endif
 
 #if defined(FMC_BANK3)
 /** @defgroup FMC_LL_NAND_Interrupt FMC NAND Interrupt
@@ -863,3 +862,5 @@ HAL_StatusTypeDef  FMC_NAND_GetECC(FMC_NAND_TypeDef *Device, uint32_t *ECCval, u
 #endif
 
 #endif /* STM32L4xx_LL_FMC_H */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

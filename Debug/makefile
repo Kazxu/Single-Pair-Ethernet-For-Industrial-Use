@@ -9,23 +9,6 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include Drivers/lwip-2.1.2/src/netif/ppp/polarssl/subdir.mk
--include Drivers/lwip-2.1.2/src/netif/ppp/subdir.mk
--include Drivers/lwip-2.1.2/src/netif/subdir.mk
--include Drivers/lwip-2.1.2/src/core/ipv6/subdir.mk
--include Drivers/lwip-2.1.2/src/core/ipv4/subdir.mk
--include Drivers/lwip-2.1.2/src/core/subdir.mk
--include Drivers/lwip-2.1.2/src/apps/tftp/subdir.mk
--include Drivers/lwip-2.1.2/src/apps/sntp/subdir.mk
--include Drivers/lwip-2.1.2/src/apps/snmp/subdir.mk
--include Drivers/lwip-2.1.2/src/apps/smtp/subdir.mk
--include Drivers/lwip-2.1.2/src/apps/netbiosns/subdir.mk
--include Drivers/lwip-2.1.2/src/apps/mqtt/subdir.mk
--include Drivers/lwip-2.1.2/src/apps/mdns/subdir.mk
--include Drivers/lwip-2.1.2/src/apps/lwiperf/subdir.mk
--include Drivers/lwip-2.1.2/src/apps/http/subdir.mk
--include Drivers/lwip-2.1.2/src/apps/altcp_tls/subdir.mk
--include Drivers/lwip-2.1.2/src/api/subdir.mk
 -include Drivers/STM32L4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
@@ -75,34 +58,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := EVAL-ADIN1110-FW_7_CPP_RAW
+BUILD_ARTIFACT_NAME := EVAL-ADIN1110EBZ_ST_uC_cubeADC
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-EVAL-ADIN1110-FW_7_CPP_RAW.elf \
+EVAL-ADIN1110EBZ_ST_uC_cubeADC.elf \
 
 MAP_FILES += \
-EVAL-ADIN1110-FW_7_CPP_RAW.map \
+EVAL-ADIN1110EBZ_ST_uC_cubeADC.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-EVAL-ADIN1110-FW_7_CPP_RAW.list \
+EVAL-ADIN1110EBZ_ST_uC_cubeADC.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: EVAL-ADIN1110-FW_7_CPP_RAW.elf secondary-outputs
+main-build: EVAL-ADIN1110EBZ_ST_uC_cubeADC.elf secondary-outputs
 
 # Tool invocations
-EVAL-ADIN1110-FW_7_CPP_RAW.elf EVAL-ADIN1110-FW_7_CPP_RAW.map: $(OBJS) $(USER_OBJS) /home/ikasu/STM32CubeIDE/workspace_1.14.0/EVAL-ADIN1110-FW_7_CPP_RAW/STM32L4S5QIIX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "EVAL-ADIN1110-FW_7_CPP_RAW.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/ikasu/STM32CubeIDE/workspace_1.14.0/EVAL-ADIN1110-FW_7_CPP_RAW/STM32L4S5QIIX_FLASH.ld" -Wl,-Map="EVAL-ADIN1110-FW_7_CPP_RAW.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+EVAL-ADIN1110EBZ_ST_uC_cubeADC.elf EVAL-ADIN1110EBZ_ST_uC_cubeADC.map: $(OBJS) $(USER_OBJS) /home/ikasu/STM32CubeIDE/workspace_1.14.0/EVAL-ADIN1110EBZ_ST_uC_cubeADC/STM32L4S5QIIX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "EVAL-ADIN1110EBZ_ST_uC_cubeADC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/ikasu/STM32CubeIDE/workspace_1.14.0/EVAL-ADIN1110EBZ_ST_uC_cubeADC/STM32L4S5QIIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EVAL-ADIN1110EBZ_ST_uC_cubeADC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -111,14 +94,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-EVAL-ADIN1110-FW_7_CPP_RAW.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "EVAL-ADIN1110-FW_7_CPP_RAW.list"
+EVAL-ADIN1110EBZ_ST_uC_cubeADC.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "EVAL-ADIN1110EBZ_ST_uC_cubeADC.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) EVAL-ADIN1110-FW_7_CPP_RAW.elf EVAL-ADIN1110-FW_7_CPP_RAW.list EVAL-ADIN1110-FW_7_CPP_RAW.map default.size.stdout
+	-$(RM) EVAL-ADIN1110EBZ_ST_uC_cubeADC.elf EVAL-ADIN1110EBZ_ST_uC_cubeADC.list EVAL-ADIN1110EBZ_ST_uC_cubeADC.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
