@@ -1,4 +1,4 @@
-# Eval_Adin1110, Bachelor Project
+# Eval_Adin1110, project
 
 IP : 192.168.22.8 PORT 66 FOR TCP SERVER
 
