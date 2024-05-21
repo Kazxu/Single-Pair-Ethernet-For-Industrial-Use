@@ -1,5 +1,9 @@
 # Single Pair Ethernet For Industrial Use
 
+## SCCP 
+
+SCCP_2 inneholder SPI kommunikajson som tillater forced power on, idle og searching. En enkel SCCP implementasjon er inkludert med bruk av en ekstern mikrokontroller.
+
 
 ## ADIN1110
 
