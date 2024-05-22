@@ -1,6 +1,12 @@
 # Single Pair Ethernet For Industrial Use
 
 
+## KICAD
+KICAD design files for the LTC4296-1 PSE prototype and LTC9111 PD prototype.
+
+
+
+
 ## SCCP 
 
 SCCP_2 uses SPI to communicate with the LTC4296-1 prototype. 

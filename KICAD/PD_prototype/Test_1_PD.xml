@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\eamen\Downloads\LTC9111_v3\LTC9111_v3\LTC9111_PD_2\Test_1_PD\Test_1_PD.kicad_sch</source>
+    <date>4/9/2024 10:05:25 AM</date>
+    <tool>Eeschema 7.0.9</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Test_1_PD.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>150nF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d0fe149c-64d1-4b9d-8de1-bd02069475a9</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>47nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>58c458e7-4fac-4b86-8c34-77cd117f18e1</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>47nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8fcfe467-61eb-4cd8-bc0a-1ea77ba0691d</tstamps>
+    </comp>
+    <comp ref="CBULK1">
+      <value>47uF</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5e861e89-9a12-4202-b917-63cb71e2fdb3</tstamps>
+    </comp>
+    <comp ref="CGATE1">
+      <value>22nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>23eb26e7-4d70-457b-a6c7-5ff39c50bb3b</tstamps>
+    </comp>
+    <comp ref="CSTBY1">
+      <value>2.2uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7cc43d20-1dbc-45f2-bfb9-a03dbadbaf03</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>PMEG10020AELR</value>
+      <footprint>Diode_SMD:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/PMEG10020AELR.pdf</datasheet>
+      <libsource lib="Diode" part="PMEG10020AELR" description="100V, 2A low leakage current MEGA Schottky barrier rectifier, SOD-123W"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="100V, 2A low leakage current MEGA Schottky barrier rectifier, SOD-123W"/>
+      <property name="ki_keywords" value="ir diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a5a4e74c-9c6e-44bb-969b-7ba1c63633bd</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>PMEG10020AELR</value>
+      <footprint>Diode_SMD:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/PMEG10020AELR.pdf</datasheet>
+      <libsource lib="Diode" part="PMEG10020AELR" description="100V, 2A low leakage current MEGA Schottky barrier rectifier, SOD-123W"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="100V, 2A low leakage current MEGA Schottky barrier rectifier, SOD-123W"/>
+      <property name="ki_keywords" value="ir diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f8f95a9a-3d89-4767-8fb3-7db640ddcd4f</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>D_Zener</value>
+      <footprint>Diode_SMD:D_SOD-128</footprint>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Zener diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>209eb3f1-4bf9-4b50-8e20-59ce2cf315ee</tstamps>
+    </comp>
+    <comp ref="IC1">
+      <value>LTC9111RDE#PBF</value>
+      <footprint>KiCad:SON50P300X400X80-13N-D</footprint>
+      <datasheet>https://www.analog.com/media/en/technical-documentation/data-sheets/ltc9111.pdf</datasheet>
+      <fields>
+        <field name="Height">0.8</field>
+        <field name="Manufacturer_Name">Analog Devices</field>
+        <field name="Manufacturer_Part_Number">LTC9111RDE#PBF</field>
+        <field name="Mouser Part Number">584-LTC9111RDE#PBF</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Analog-Devices/LTC9111RDEPBF?qs=rQFj71Wb1eUvOGbK5XL1vA%3D%3D</field>
+      </fields>
+      <libsource lib="LTC9111RDE#PBF" part="LTC9111RDE#PBF" description="Power Over Ethernet Controller 1 Channel 802.3cg (PoE) 12-DFN (4x3)"/>
+      <property name="Height" value="0.8"/>
+      <property name="Mouser Part Number" value="584-LTC9111RDE#PBF"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Analog-Devices/LTC9111RDEPBF?qs=rQFj71Wb1eUvOGbK5XL1vA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Analog Devices"/>
+      <property name="Manufacturer_Part_Number" value="LTC9111RDE#PBF"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Power Over Ethernet Controller 1 Channel 802.3cg (PoE) 12-DFN (4x3)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e555be06-a75a-4002-939b-105554b6b451</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x04_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x04_Pin" description="Generic connector, single row, 01x04, script generated"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x04, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0e06c6be-3114-466f-b2df-e46e2542d9bf</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x06_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x06_Pin" description="Generic connector, single row, 01x06, script generated"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x06, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>45172e9a-aea0-47a8-8ddf-97dd0532270c</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_01x06_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x06_Pin" description="Generic connector, single row, 01x06, script generated"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x06, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8ad4414c-f3d9-43eb-a558-33c67b50e568</tstamps>
+    </comp>
+    <comp ref="L2">
+      <value>MSD7342-683MLC</value>
+      <footprint>footprints:MSD7342_COC</footprint>
+      <datasheet>MSD7342-683MLC</datasheet>
+      <libsource lib="2024-03-15_10-10-31" part="MSD7342-683MLC" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_keywords" value="MSD7342-683MLC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a45e0ae1-d420-4761-b558-855ec670d595</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>PSMN075-100MSEX</value>
+      <footprint>footprints2:LFPAK33_SOT1210_NEX</footprint>
+      <datasheet>PSMN075-100MSEX</datasheet>
+      <libsource lib="2024-03-19_11-29-30" part="PSMN075-100MSEX" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_keywords" value="PSMN075-100MSEX"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e4014034-8e95-4958-8836-9a950a6b9bbd</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>BSS123</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.diodes.com/assets/Datasheets/ds30366.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="BSS123" description="0.17A Id, 100V Vds, N-Channel MOSFET, SOT-23"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="0.17A Id, 100V Vds, N-Channel MOSFET, SOT-23"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>15577132-f10c-408d-965c-40dd52edab41</tstamps>
+    </comp>
+    <comp ref="Q3">
+      <value>BSS123</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.diodes.com/assets/Datasheets/ds30366.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="BSS123" description="0.17A Id, 100V Vds, N-Channel MOSFET, SOT-23"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="0.17A Id, 100V Vds, N-Channel MOSFET, SOT-23"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9f9264c3-8942-47bb-b421-ea1c9984c0bd</tstamps>
+    </comp>
+    <comp ref="Q4">
+      <value>BUK9M120-100EX</value>
+      <footprint>Package_TO_SOT_SMD:LFPAK33</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/BUK9M120-100E.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="BUK9M120-100EX" description="11.5A Id, 100V Vds, N-Channel TrenchMOS MOSFET, 119mOhm Ron, 8.8nC Qqd, -55 to 175 °C, LFPAK33"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="11.5A Id, 100V Vds, N-Channel TrenchMOS MOSFET, 119mOhm Ron, 8.8nC Qqd, -55 to 175 °C, LFPAK33"/>
+      <property name="ki_keywords" value="Power MOSFET N-MOS"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ecf772e8-0b9d-4d62-a90d-c036c5b33c84</tstamps>
+    </comp>
+    <comp ref="Q5">
+      <value>BUK9M120-100EX</value>
+      <footprint>Package_TO_SOT_SMD:LFPAK33</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/BUK9M120-100E.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="BUK9M120-100EX" description="11.5A Id, 100V Vds, N-Channel TrenchMOS MOSFET, 119mOhm Ron, 8.8nC Qqd, -55 to 175 °C, LFPAK33"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="11.5A Id, 100V Vds, N-Channel TrenchMOS MOSFET, 119mOhm Ron, 8.8nC Qqd, -55 to 175 °C, LFPAK33"/>
+      <property name="ki_keywords" value="Power MOSFET N-MOS"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1d7dc5de-d537-402a-a1d9-fb86a9137230</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>40, 1/4</value>
+      <footprint>Resistor_SMD:R_1210_3225Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>97f84a72-7e14-4bb5-b0c8-f3ba04838bab</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>39a6af27-b453-422a-9f00-7d1207368a25</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>3.3, 1/4</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>99c152d3-9daf-4515-a7bf-bc21dcda029b</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>3.3, 1/4</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ec3f17ed-b41a-488b-814c-4c821fda1e71</tstamps>
+    </comp>
+    <comp ref="RBULK1">
+      <value>3.3, 1/4</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1a53507d-5b3c-4ae5-b964-104c2985a98b</tstamps>
+    </comp>
+    <comp ref="RGATE1">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Test_1_PD.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e2073877-7b2d-444a-bfc6-62cbf95e3db5</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="2024-03-15_10-10-31" part="MSD7342-683MLC">
+      <docs>MSD7342-683MLC</docs>
+      <footprints>
+        <fp>MSD7342_COC</fp>
+        <fp>MSD7342_COC-M</fp>
+        <fp>MSD7342_COC-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L2</field>
+        <field name="Value">MSD7342-683MLC</field>
+        <field name="Footprint">footprints:MSD7342_COC</field>
+        <field name="Datasheet">MSD7342-683MLC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="2024-03-19_11-29-30" part="PSMN075-100MSEX">
+      <docs>PSMN075-100MSEX</docs>
+      <footprints>
+        <fp>LFPAK33_SOT1210_NEX</fp>
+        <fp>LFPAK33_SOT1210_NEX-M</fp>
+        <fp>LFPAK33_SOT1210_NEX-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q1</field>
+        <field name="Value">PSMN075-100MSEX</field>
+        <field name="Footprint">footprints2:LFPAK33_SOT1210_NEX</field>
+        <field name="Datasheet">PSMN075-100MSEX</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S" type="passive"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+        <pin num="4" name="G" type="unspecified"/>
+        <pin num="5" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x04_Pin">
+      <description>Generic connector, single row, 01x04, script generated</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04_Pin</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x06_Pin">
+      <description>Generic connector, single row, 01x06, script generated</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06_Pin</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Zener">
+      <description>Zener diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="PMEG10020AELR">
+      <description>100V, 2A low leakage current MEGA Schottky barrier rectifier, SOD-123W</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/PMEG10020AELR.pdf</docs>
+      <footprints>
+        <fp>Nexperia*CFP3*SOD?123W*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">PMEG10020AELR</field>
+        <field name="Footprint">Diode_SMD:Nexperia_CFP3_SOD-123W</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/PMEG10020AELR.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LTC9111RDE#PBF" part="LTC9111RDE#PBF">
+      <description>Power Over Ethernet Controller 1 Channel 802.3cg (PoE) 12-DFN (4x3)</description>
+      <docs>https://www.analog.com/media/en/technical-documentation/data-sheets/ltc9111.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">LTC9111RDE#PBF</field>
+        <field name="Footprint">SON50P300X400X80-13N-D</field>
+        <field name="Datasheet">https://www.analog.com/media/en/technical-documentation/data-sheets/ltc9111.pdf</field>
+        <field name="Height">0.8</field>
+        <field name="Mouser Part Number">584-LTC9111RDE#PBF</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Analog-Devices/LTC9111RDEPBF?qs=rQFj71Wb1eUvOGbK5XL1vA%3D%3D</field>
+        <field name="Manufacturer_Name">Analog Devices</field>
+        <field name="Manufacturer_Part_Number">LTC9111RDE#PBF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SNS1" type="passive"/>
+        <pin num="2" name="SNS2" type="passive"/>
+        <pin num="3" name="IN" type="passive"/>
+        <pin num="4" name="STBY" type="passive"/>
+        <pin num="5" name="CLASSV" type="passive"/>
+        <pin num="6" name="EN" type="passive"/>
+        <pin num="7" name="SCCP" type="passive"/>
+        <pin num="8" name="LGATE2" type="passive"/>
+        <pin num="9" name="LGATE1" type="passive"/>
+        <pin num="10" name="CLASSC" type="passive"/>
+        <pin num="11" name="OUT" type="passive"/>
+        <pin num="12" name="GATE" type="passive"/>
+        <pin num="13" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="BSS123">
+      <description>0.17A Id, 100V Vds, N-Channel MOSFET, SOT-23</description>
+      <docs>http://www.diodes.com/assets/Datasheets/ds30366.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BSS123</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">http://www.diodes.com/assets/Datasheets/ds30366.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="BUK9M120-100EX">
+      <description>11.5A Id, 100V Vds, N-Channel TrenchMOS MOSFET, 119mOhm Ron, 8.8nC Qqd, -55 to 175 °C, LFPAK33</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/BUK9M120-100E.pdf</docs>
+      <footprints>
+        <fp>LFPAK33*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BUK9M120-100EX</field>
+        <field name="Footprint">Package_TO_SOT_SMD:LFPAK33</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/BUK9M120-100E.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S" type="passive"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+        <pin num="4" name="G" type="passive"/>
+        <pin num="5" name="D" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="2024-03-15_10-10-31">
+      <uri>C:/Users/eamen/Downloads/ul_MSD7342-683MLC/KiCADv6/2024-03-15_10-10-31.kicad_sym</uri>
+    </library>
+    <library logical="2024-03-19_11-29-30">
+      <uri>C:/Users/eamen/Downloads/ul_PSMN075-100MSEX/KiCADv6/2024-03-19_11-29-30.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Diode.kicad_sym</uri>
+    </library>
+    <library logical="LTC9111RDE#PBF">
+      <uri>C:/Users/eamen/Downloads/LIB_LTC9111RDEPBF/LTC9111RDE#PBF/KiCad/LTC9111RDE#PBF.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Transistor_FET.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/PODL+">
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="L2" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="2" name="/PODL-">
+      <node ref="J2" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="L2" pin="4" pinfunction="4" pintype="passive"/>
+    </net>
+    <net code="3" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="CBULK1" pin="2" pintype="passive"/>
+      <node ref="CGATE1" pin="2" pintype="passive"/>
+      <node ref="CSTBY1" pin="2" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="IC1" pin="13" pinfunction="GND" pintype="passive"/>
+      <node ref="IC1" pin="5" pinfunction="CLASSV" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="Q4" pin="1" pinfunction="S" pintype="passive"/>
+      <node ref="Q4" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="Q4" pin="3" pinfunction="S" pintype="passive"/>
+      <node ref="Q5" pin="1" pinfunction="S" pintype="passive"/>
+      <node ref="Q5" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="Q5" pin="3" pinfunction="S" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="4" name="Net-(C1-Pad1)">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="5" name="Net-(C3-Pad1)">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+    </net>
+    <net code="6" name="Net-(CBULK1-Pad1)">
+      <node ref="CBULK1" pin="1" pintype="passive"/>
+      <node ref="RBULK1" pin="2" pintype="passive"/>
+    </net>
+    <net code="7" name="Net-(CGATE1-Pad1)">
+      <node ref="CGATE1" pin="1" pintype="passive"/>
+      <node ref="RGATE1" pin="2" pintype="passive"/>
+    </net>
+    <net code="8" name="Net-(D1-A)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="IC1" pin="1" pinfunction="SNS1" pintype="passive"/>
+      <node ref="L2" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="Q5" pin="5" pinfunction="D" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="9" name="Net-(D1-K)">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="IC1" pin="3" pinfunction="IN" pintype="passive"/>
+      <node ref="Q1" pin="5" pinfunction="D" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="10" name="Net-(D2-A)">
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="IC1" pin="2" pinfunction="SNS2" pintype="passive"/>
+      <node ref="L2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="Q3" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="Q4" pin="5" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(IC1-CLASSC)">
+      <node ref="CSTBY1" pin="1" pintype="passive"/>
+      <node ref="IC1" pin="10" pinfunction="CLASSC" pintype="passive"/>
+      <node ref="IC1" pin="4" pinfunction="STBY" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(IC1-GATE)">
+      <node ref="IC1" pin="12" pinfunction="GATE" pintype="passive"/>
+      <node ref="Q1" pin="4" pinfunction="G" pintype="unspecified"/>
+      <node ref="RGATE1" pin="1" pintype="passive"/>
+    </net>
+    <net code="13" name="Net-(IC1-LGATE1)">
+      <node ref="IC1" pin="9" pinfunction="LGATE1" pintype="passive"/>
+      <node ref="Q5" pin="4" pinfunction="G" pintype="passive"/>
+    </net>
+    <net code="14" name="Net-(IC1-LGATE2)">
+      <node ref="IC1" pin="8" pinfunction="LGATE2" pintype="passive"/>
+      <node ref="Q4" pin="4" pinfunction="G" pintype="passive"/>
+    </net>
+    <net code="15" name="Net-(IC1-OUT)">
+      <node ref="IC1" pin="11" pinfunction="OUT" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="Q1" pin="1" pinfunction="S" pintype="passive"/>
+      <node ref="RBULK1" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="Net-(IC1-SCCP)">
+      <node ref="IC1" pin="7" pinfunction="SCCP" pintype="passive"/>
+      <node ref="Q2" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="Q3" pin="1" pinfunction="G" pintype="input"/>
+    </net>
+    <net code="17" name="Net-(Q2-S)">
+      <node ref="Q2" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="18" name="Net-(Q3-S)">
+      <node ref="Q3" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="19" name="unconnected-(IC1-EN-Pad6)">
+      <node ref="IC1" pin="6" pinfunction="EN" pintype="passive+no_connect"/>
+    </net>
+    <net code="20" name="unconnected-(J1-Pin_1-Pad1)">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="21" name="unconnected-(J1-Pin_2-Pad2)">
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(J2-Pin_2-Pad2)">
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(J2-Pin_3-Pad3)">
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(J2-Pin_4-Pad4)">
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(J2-Pin_5-Pad5)">
+      <node ref="J2" pin="5" pinfunction="Pin_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(J3-Pin_2-Pad2)">
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(J3-Pin_3-Pad3)">
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(J3-Pin_4-Pad4)">
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(J3-Pin_5-Pad5)">
+      <node ref="J3" pin="5" pinfunction="Pin_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(Q1-S-Pad2)">
+      <node ref="Q1" pin="2" pinfunction="S" pintype="passive+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(Q1-S-Pad3)">
+      <node ref="Q1" pin="3" pinfunction="S" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

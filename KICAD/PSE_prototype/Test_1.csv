@@ -1,0 +1,27 @@
+#,Reference,Qty,Value,Footprint,DNP,
+1,C1,1,1uF,Capacitor_SMD:C_0805_2012Metric,x,
+2,C2,1,1nF,Capacitor_SMD:C_0805_2012Metric,x,
+3,C3,1,0.1uF,Capacitor_SMD:C_0805_2012Metric,x,
+4,C4,1,2.2u,Capacitor_SMD:C_0805_2012Metric,x,
+5,"C5, C7",2,2.2n,Capacitor_SMD:C_0805_2012Metric,x,
+6,C6,1,0.47u,Capacitor_SMD:C_1206_3216Metric,x,7
+7,D1,1,SMAJ33A,Diode_SMD:D_SMA,x,8
+8,J1,1,Conn_01x04_Pin,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,,
+9,"J2, J3",2,Conn_01x02_Pin,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,,
+10,"J4, J5, J6",3,Conn_01x01_Pin,Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical,,
+11,"J105, J106",2,Conn_01x06_Pin,Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical,,
+12,"JP1, JP2, JP3",3,Jumper_3_Open,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,,
+13,L1,1,MSD7342-683MLC,footprints:MSD7342_COC,x,9
+14,Q1,1,BUK7M45-40EX,Package_TO_SOT_SMD:LFPAK33,x,
+15,"Q2, Q3",2,BSS123,Package_TO_SOT_SMD:SOT-23,x,
+16,Q4,1,MMBTA06,Package_TO_SOT_SMD:SOT-23,x,13
+17,R1,1,0.62,Resistor_SMD:R_1206_3216Metric,x,
+18,R2,1,50,Resistor_SMD:R_0805_2012Metric,x,
+19,R3,1,20,Resistor_SMD:R_0805_2012Metric,x,
+20,R4,1,10k,Resistor_SMD:R_0805_2012Metric,x,
+21,"R5, R8, R11",3,5k,Resistor_SMD:R_0805_2012Metric,x,
+22,"R6, R9",2,5,Resistor_SMD:R_0805_2012Metric,x,
+23,R7,1,24.3k,Resistor_SMD:R_0805_2012Metric,x,
+24,R10,1,50k,Resistor_SMD:R_0805_2012Metric,x,24
+25,U1,1,~,Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm,x,
+26,U2,1,MOUDLE-SEEEDUINO-XIAO,XIAO_PCB:MOUDLE14P-2.54-21X17.8MM,x,26
