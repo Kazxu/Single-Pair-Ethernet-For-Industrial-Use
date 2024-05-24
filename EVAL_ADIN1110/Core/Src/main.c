@@ -41,8 +41,9 @@ char buffer[50];
 int main(void)
 {
 	char temp[10];
-	SystemClock_Config();
 	HAL_Init();
+	SystemClock_Config();
+
 	MX_ADC1_Init();            // Initialize ADC
 
 
@@ -127,7 +128,7 @@ int main(void)
      HAL_ADC_Start(&hadc1);  // Start ADC conversion
 
      // Poll for conversion completion with a timeout of 20 ms
-     HAL_ADC_PollForConversion(&hadc1, 100);
+     HAL_ADC_PollForConversion(&hadc1, 1000);
 
      // Get the ADC value after conversion completion
      adcValue = HAL_ADC_GetValue(&hadc1);

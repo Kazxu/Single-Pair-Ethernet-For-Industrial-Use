@@ -1,6 +1,0 @@
-../Drivers/lwip-2.1.2/src/core/ipv4/ip4_addr.c:58:1:ip4_addr_isbroadcast_u32	7
-../Drivers/lwip-2.1.2/src/core/ipv4/ip4_addr.c:93:1:ip4_addr_netmask_valid	5
-../Drivers/lwip-2.1.2/src/core/ipv4/ip4_addr.c:123:1:ipaddr_addr	2
-../Drivers/lwip-2.1.2/src/core/ipv4/ip4_addr.c:145:1:ip4addr_aton	27
-../Drivers/lwip-2.1.2/src/core/ipv4/ip4_addr.c:267:1:ip4addr_ntoa	1
-../Drivers/lwip-2.1.2/src/core/ipv4/ip4_addr.c:283:1:ip4addr_ntoa_r	6
