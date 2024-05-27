@@ -41,6 +41,8 @@ char buffer[50];
 int main(void)
 {
 	char temp[10];
+	float adc_float;
+	float strom;
 	HAL_Init();
 	SystemClock_Config();
 
@@ -127,8 +129,8 @@ int main(void)
 
      HAL_ADC_Start(&hadc1);  // Start ADC conversion
 
-     // Poll for conversion completion with a timeout of 20 ms
-     HAL_ADC_PollForConversion(&hadc1, 1000);
+     // Poll for conversion completion with a timeout of x ms
+     HAL_ADC_PollForConversion(&hadc1, 100);
 
      // Get the ADC value after conversion completion
      adcValue = HAL_ADC_GetValue(&hadc1);
@@ -136,8 +138,13 @@ int main(void)
      // Stop ADC conversion
      HAL_ADC_Stop(&hadc1);
 
+     strom = ((float)adcValue - 325) / 205.9375 + 4;
+
      // Convert the integer ADC value to a string and store it in buffer
-     snprintf(buffer, sizeof(buffer), "Value: %lu \r\n", adcValue);
+     //snprintf(buffer, sizeof(buffer), "Value: %lu \r\n", adcValue);
+
+      // Convert the float ADC value to a string and store it in buffer
+     snprintf(buffer, sizeof(buffer), "%.2f \r\n", strom);
 
      // Transmit the string via UART
      HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), HAL_MAX_DELAY);

@@ -1,0 +1,13 @@
+../Drivers/CMSIS/Include/core_cm4.h:1698:26:__NVIC_GetEnableIRQ	2
+../Drivers/CMSIS/Include/core_cm4.h:1736:26:__NVIC_GetPendingIRQ	2
+../Drivers/CMSIS/Include/core_cm4.h:1755:22:__NVIC_SetPendingIRQ	2
+../Core/Src/hal.c:69:10:HAL_DisableIrq	1
+../Core/Src/hal.c:76:10:HAL_EnableIrq	1
+../Core/Src/hal.c:83:10:HAL_SetPendingIrq	1
+../Core/Src/hal.c:90:10:HAL_GetPendingIrq	1
+../Core/Src/hal.c:95:10:HAL_GetEnableIrq	1
+../Core/Src/hal.c:112:10:HAL_RegisterCallback	1
+../Core/Src/hal.c:130:10:HAL_SpiReadWrite	1
+../Core/Src/hal.c:147:10:HAL_SpiRegisterCallback	1
+../Core/Src/hal.c:152:10:HAL_Init_Hook	1
+../Core/Src/hal.c:157:10:HAL_UnInit_Hook	1

@@ -75,34 +75,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := EVAL-ADIN1110-FW_94
+BUILD_ARTIFACT_NAME := EVAL-ADIN1110-FW_96_ADC
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-EVAL-ADIN1110-FW_94.elf \
+EVAL-ADIN1110-FW_96_ADC.elf \
 
 MAP_FILES += \
-EVAL-ADIN1110-FW_94.map \
+EVAL-ADIN1110-FW_96_ADC.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-EVAL-ADIN1110-FW_94.list \
+EVAL-ADIN1110-FW_96_ADC.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: EVAL-ADIN1110-FW_94.elf secondary-outputs
+main-build: EVAL-ADIN1110-FW_96_ADC.elf secondary-outputs
 
 # Tool invocations
-EVAL-ADIN1110-FW_94.elf EVAL-ADIN1110-FW_94.map: $(OBJS) $(USER_OBJS) /home/ikasu/STM32CubeIDE/workspace_1.14.0/EVAL-ADIN1110-FW_94/STM32L4S5QIIX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "EVAL-ADIN1110-FW_94.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/ikasu/STM32CubeIDE/workspace_1.14.0/EVAL-ADIN1110-FW_94/STM32L4S5QIIX_FLASH.ld" -Wl,-Map="EVAL-ADIN1110-FW_94.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+EVAL-ADIN1110-FW_96_ADC.elf EVAL-ADIN1110-FW_96_ADC.map: $(OBJS) $(USER_OBJS) /home/ikasu/STM32CubeIDE/workspace_1.14.0/EVAL-ADIN1110-FW_96_ADC/STM32L4S5QIIX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "EVAL-ADIN1110-FW_96_ADC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/ikasu/STM32CubeIDE/workspace_1.14.0/EVAL-ADIN1110-FW_96_ADC/STM32L4S5QIIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EVAL-ADIN1110-FW_96_ADC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -111,14 +111,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-EVAL-ADIN1110-FW_94.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "EVAL-ADIN1110-FW_94.list"
+EVAL-ADIN1110-FW_96_ADC.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "EVAL-ADIN1110-FW_96_ADC.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) EVAL-ADIN1110-FW_94.elf EVAL-ADIN1110-FW_94.list EVAL-ADIN1110-FW_94.map default.size.stdout
+	-$(RM) EVAL-ADIN1110-FW_96_ADC.elf EVAL-ADIN1110-FW_96_ADC.list EVAL-ADIN1110-FW_96_ADC.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
