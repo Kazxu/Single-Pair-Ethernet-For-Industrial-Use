@@ -25,6 +25,10 @@ TCP/IP : 192.168.22.8 PORT 66
 
 Serial Monitor Works.
 
-ADC Currently only works in branch "dev_adc_only".
+ADC Works.
+
+Non-calibrated ADC.
+
+Client-side GUI CONCEPT PROTOTYPE - Added as placeholder for showcase.
 
 
