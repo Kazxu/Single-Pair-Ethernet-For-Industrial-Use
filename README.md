@@ -21,13 +21,11 @@ SCCP classification between LTC4296-1 and LTC9111 can be performed as well.
 
 ## ADIN1110
 
-TCP/IP : 192.168.22.8 PORT 66 
+TCP/IP : Ok.
 
-Serial Monitor Works.
+Serial Monitor : Ok.
 
-ADC Works.
-
-Non-calibrated ADC.
+ADC : Ok. (Non-calibrated ADC)
 
 Client-side GUI CONCEPT PROTOTYPE - Added as placeholder for showcase.
 
