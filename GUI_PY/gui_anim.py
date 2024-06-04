@@ -8,7 +8,7 @@ import time
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / "assets"
-ICON_PATH = OUTPUT_PATH / "icon.png"  # Update this path to your icon path
+ICON_PATH = OUTPUT_PATH / "icon.png"  # ICON PATH
 
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
@@ -169,6 +169,6 @@ needle = meter_canvas.create_line(250, 250, 250 + 200 * cos(135 * pi / 180), 250
 current_value_label = Label(window, text="4.00mA", fg="white", bg="black", font=("Inter", 20))
 current_value_label.place(x=550, y=20, anchor="n")  # Centered above the meter
 
-window.resizable(False, False)
+window.resizable(False, False) # Resizable
 window.mainloop()
 
