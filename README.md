@@ -5,7 +5,7 @@
 
 
 ## KICAD
-KICAD design files for the LTC4296-1 PSE prototype and LTC9111 PD prototype.
+KICAD PCB design files for the LTC4296-1 PSE prototype and LTC9111 PD prototype.
 
 
 
