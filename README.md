@@ -24,12 +24,16 @@ SCCP classification between LTC4296-1 and LTC9111 can be performed as well.
 
 ## ADIN1110
 
-TCP/IP : Ok.
+MCU Firmware : STM32L4xx - https://github.com/STMicroelectronics/STM32CubeL4 
 
-Serial Monitor : Ok.
+LL DRIVERS : ADIN1110 Support files by Analog Devices.
 
-ADC : Ok. (Non-calibrated ADC)
+TCP/IP : LWIP 2.1.2 & Callback API from LWIP. 
 
-Client-side GUI CONCEPT PROTOTYPE - Added as placeholder for showcase.
+Serial Monitor : USART.c & USART.h, huart1.Init.BaudRate = 115200
+
+ADC : INIT in Main.c & stm32l4xx_hal_msp.c
+
+Client-side GUI CONCEPT PROTOTYPE - Python, Added as placeholder for showcase.
 
 
