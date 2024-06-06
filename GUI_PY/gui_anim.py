@@ -1,6 +1,5 @@
 import socket
 import threading
-import sys
 from pathlib import Path
 from tkinter import Tk, Canvas, Button, PhotoImage, Label
 from math import pi, cos, sin
@@ -19,11 +18,13 @@ connected = False
 current_value = 4.0
 
 # Function to receive data from the server
-def receive(sock, signal, meter_canvas, needle, status_label, current_value_label):
+def receive(sock, signal, meter_canvas, needle, status_label, current_value_label, error_label):
     global current_value
     while signal:
         try:
             data = sock.recv(32)
+            if not data:
+                raise ConnectionError("No data received")
             message = data.decode("utf-8")
             try:
                 value = float(message)
@@ -37,10 +38,14 @@ def receive(sock, signal, meter_canvas, needle, status_label, current_value_labe
                         current_value_label.config(fg="#FFFF00")  # Yellow
                     else:
                         current_value_label.config(fg="#FF0000")  # Red
+                error_label.config(text="")
             except ValueError:
                 pass
-        except:
+        except (ConnectionError, socket.error):
             status_label.config(text="Not Connected", fg="red")
+            error_label.config(text="Connection lost or server not responding.")
+            button_1.config(text="Connect")
+            connected = False
             break
 
 # Function to animate the needle smoothly
@@ -56,12 +61,26 @@ def animate_needle(canvas, needle, start_value, end_value, steps=100, delay=0.01
         canvas.coords(needle, x0, y0, x1, y1)
         time.sleep(delay)
 
+# Function to send a heartbeat to the server
+def send_heartbeat():
+    global connected
+    while connected:
+        try:
+            sock.send(b"HEARTBEAT")
+            time.sleep(5)
+        except (socket.error, OSError):
+            connected = False
+            status_label.config(text="Not Connected", fg="red")
+            error_label.config(text="Connection Error.")
+            button_1.config(text="Connect")
+            break
+
 # Function to connect to the server
 def connect_to_server():
     global sock, connected
     if not connected:
         # Get host and port
-        host = '192.168.100.1'
+        host = '10.0.2.15'
         port = 66
 
         # Attempt connection to server
@@ -69,14 +88,20 @@ def connect_to_server():
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             sock.connect((host, port))
             status_label.config(text="Connected", fg="green")
+            error_label.config(text="")
             button_1.config(text="Disconnect")
             connected = True
 
             # Create new thread to wait for data
-            receive_thread = threading.Thread(target=receive, args=(sock, True, meter_canvas, needle, status_label, current_value_label))
+            receive_thread = threading.Thread(target=receive, args=(sock, True, meter_canvas, needle, status_label, current_value_label, error_label))
             receive_thread.start()
+
+            # Create new thread for heartbeat
+            heartbeat_thread = threading.Thread(target=send_heartbeat)
+            heartbeat_thread.start()
         except:
             status_label.config(text="Not Connected", fg="red")
+            error_label.config(text="Failed to connect to the server.")
             return
     else:
         # Disconnect from the server
@@ -87,6 +112,7 @@ def connect_to_server():
             connected = False
         except:
             status_label.config(text="Error Disconnecting", fg="red")
+            error_label.config(text="Error while disconnecting.")
             return
 
 window = Tk()
@@ -130,6 +156,9 @@ button_1.place(
 
 status_label = Label(window, text="Not Connected", fg="red", bg="#FFFFFF", font=("Inter", 20))  # Changed background color to white
 status_label.place(x=33, y=160)  # Adjusted the y position to add more spacing
+
+error_label = Label(window, text="", fg="red", bg="#FFFFFF", font=("Inter", 12))  # Error label for displaying error messages
+error_label.place(x=33, y=300)  # Position error label below the button
 
 canvas.create_text(
     33.0,
