@@ -4,6 +4,8 @@
 
 
 
+
+
 ## KICAD
 KICAD PCB design files for the LTC4296-1 PSE prototype and LTC9111 PD prototype.
 
@@ -22,7 +24,7 @@ SCCP classification between LTC4296-1 and LTC9111 can be performed as well.
 
 
 
-## ADIN1110
+## ADIN1110 - Development with STM32Cube IDE.
 
 MCU Firmware : STM32L4xx - https://github.com/STMicroelectronics/STM32CubeL4 
 
